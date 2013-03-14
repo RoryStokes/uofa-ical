@@ -1,5 +1,5 @@
 import icalendar,pytz,datetime
-import parser,subject,exporter
+import myparser,subject,exporter
 
 inPath  = raw_input("Enter the (relative) path to the HTML file you wish to convert: ")
 outPath = raw_input("Enter the (relative) path to store the output ICS file (*.ics): ")
@@ -11,7 +11,7 @@ outFile = open(outPath,"w")
 
 
 # instantiate the parser and fed it some HTML
-p = parser.Parser()
+p = myparser.Parser()
 p.feed(inFile.read())
 inFile.close()
 
